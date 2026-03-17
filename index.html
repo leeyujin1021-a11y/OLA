@@ -3,18 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OLA</title>
+    <title>Magazine | OLA</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="home-wrapper">
-        <h1 class="logo">OLA</h1>
-        <nav class="main-nav">
+    <nav class="sub-nav">
+        <div class="logo-small" onclick="location.href='index.html'">OLA</div>
+        <div class="menu-small">
             <a href="magazine.html">MAGAZINE</a>
             <a href="flows.html">FLOWS</a>
-        </nav>
-    </div>
-    <script src="main.js"></script>
+        </div>
+    </nav>
+
+    <main class="magazine-layout">
+        <h2 class="serif-italic">The Archive</h2>
+        
+        <div class="article-list">
+            <article class="magazine-item">
+                <span class="category">Neuroscience</span>
+                <h3 onclick="location.href='post-1.html'">The Psychology of Blue Mind: How Water Heals the Modern Brain</h3>
+                <p>Recent neuro-psychological studies reveal the profound impact of ocean proximity on cognitive recovery and stress reduction...</p>
+                <a href="post-1.html" class="read-link">Read Insight →</a>
+            </article>
+
+            <div class="ad-placeholder">Advertisement</div>
+
+            <article class="magazine-item">
+                <span class="category">Luxury Wellness</span>
+                <h3 onclick="location.href='post-2.html'">Luxury Wellness Retreats 2026: Why Ocean Therapy is the New Standard</h3>
+                <p>Discover why the world's most exclusive retreats are moving towards 'Blue Mind' therapy as their core wellness protocol...</p>
+                <a href="post-2.html" class="read-link">Read Insight →</a>
+            </article>
+        </div>
+        
+        <div class="more-container">
+            <button class="more-btn">More Insight</button>
+        </div>
+    </main>
 </body>
 </html>
