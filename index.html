@@ -1,28 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OLA | Luxury Wellness & Blue Mind</title>
+    <title>OLA | Quiet Luxury Wellness</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
+    <canvas id="ocean-canvas"></canvas>
+
     <nav>
-        <div class="logo serif-italic" onclick="location.href='/'">OLA</div>
+        <div class="logo">OLA</div>
         <div class="menu">
-            <a href="magazine.html">Magazine</a>
-            <a href="flows.html">Flows</a>
+            <a href="#magazine">Magazine</a>
+            <a href="#curation">Curation</a>
+            <a href="#playground">Playground</a>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1 class="serif-italic">The Art of Blue Wellness</h1>
-            <p class="subtitle">Exploring the Intersection of Ocean & Psychology</p>
-            <button class="cta-btn" onclick="location.href='magazine.html'">Read Insights</button>
-        </div>
-    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="serif-italic">Find your depth in motion</h1>
+            </div>
+        </section>
+
+        <section id="magazine" class="magazine">
+            <div class="section-header">
+                <h3 class="serif">The Deep Insight</h3>
+                <span class="line"></span>
+            </div>
+            
+            <div id="post-container" class="post-grid">
+                <ola-post-card 
+                    title="The Silence of Blue" 
+                    category="Healing" 
+                    image="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80">
+                </ola-post-card>
+                <ola-post-card 
+                    title="Breath in Motion" 
+                    category="Wellness" 
+                    image="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80">
+                </ola-post-card>
+                <ola-post-card 
+                    title="Oceanic Texture" 
+                    category="Design" 
+                    image="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80">
+                </ola-post-card>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 OLA. Quietly Curated.</p>
+    </footer>
 
     <script src="main.js"></script>
 </body>

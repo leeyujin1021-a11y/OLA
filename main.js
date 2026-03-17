@@ -109,3 +109,14 @@ class OlaPostCard extends HTMLElement {
 customElements.define('ola-post-card', OlaPostCard);
 
 console.log("OLA: Beyond the surface.");
+// 기존 Canvas 코드는 유지...
+
+// 스무스 스크롤 기능 추가
+document.querySelectorAll('.menu a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
