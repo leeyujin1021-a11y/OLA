@@ -66,17 +66,15 @@ nav {
 .subtitle { font-size: 0.9rem; letter-spacing: 5px; text-transform: uppercase; opacity: 0.7; }
 
 /* Magazine Section */
-.magazine { padding: 8rem 4rem; max-width: 1200px; mx-auto: 0; }
+.magazine { padding: 8rem 4rem; max-width: 1200px; margin: 0 auto; }
 .section-header { display: flex; align-items: center; margin-bottom: 4rem; }
 .section-header h3 { font-size: 2.5rem; margin-right: 2rem; }
 .line { flex-grow: 1; height: 1px; background: var(--deep-blue); opacity: 0.2; }
 
 .post-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 5rem;
 }
 
-.post-card { cursor: pointer; transition: transform 0.5s; }
-.post-card:hover { transform: translateY(-10px); }
-.post-card img { width: 100%; aspect-ratio: 4/5; object-fit: cover; margin-bottom: 1.5rem; }
+/* Old post-card styles removed as we now use Web Components */

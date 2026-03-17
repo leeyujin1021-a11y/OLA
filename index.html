@@ -23,7 +23,6 @@
         <section class="hero">
             <div class="hero-content">
                 <h2 class="serif-italic">Find your depth in motion</h2>
-                <p class="subtitle">Ocean-based Healing & Wellness Hub</p>
             </div>
         </section>
 
@@ -34,9 +33,22 @@
             </div>
             
             <div id="post-container" class="post-grid">
-                <div class="post-card loading">
-                    <p>본질을 불러오는 중입니다...</p>
-                </div>
+                <!-- Web Components will be injected here -->
+                <ola-post-card 
+                    title="The Silence of Blue" 
+                    category="Healing" 
+                    image="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80">
+                </ola-post-card>
+                <ola-post-card 
+                    title="Breath in Motion" 
+                    category="Wellness" 
+                    image="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80">
+                </ola-post-card>
+                <ola-post-card 
+                    title="Oceanic Texture" 
+                    category="Design" 
+                    image="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80">
+                </ola-post-card>
             </div>
         </section>
     </main>
