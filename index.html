@@ -1,14 +1,50 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLA | Quiet Luxury Wellness</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <canvas id="ocean-canvas"></canvas>
+
+    <nav>
+        <div class="logo">OLA</div>
+        <div class="menu">
+            <a href="#magazine">Magazine</a>
+            <a href="#curation">Curation</a>
+            <a href="#playground">Playground</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2 class="serif-italic">Find your depth in motion</h2>
+                <p class="subtitle">Ocean-based Healing & Wellness Hub</p>
+            </div>
+        </section>
+
+        <section id="magazine" class="magazine">
+            <div class="section-header">
+                <h3 class="serif">The Deep Insight</h3>
+                <span class="line"></span>
+            </div>
+            
+            <div id="post-container" class="post-grid">
+                <div class="post-card loading">
+                    <p>본질을 불러오는 중입니다...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 OLA. Quietly Curated.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
