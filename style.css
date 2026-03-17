@@ -1,99 +1,84 @@
-:root {
-    --deep-blue: #001F3F;
-    --sand-white: #F4F1EE;
-    --accent-gold: #C5A059;
-    --text-gray: #4A4A4A;
+/* 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    background-color: var(--sand-white);
-    color: var(--deep-blue);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    overflow-x: hidden;
+    background-color: #F8F6F4; /* 샌드 화이트 */
+    color: #001F3F; /* 딥 블루 */
+    font-family: 'Playfair Display', serif;
+    -webkit-font-smoothing: antialiased;
 }
 
-.serif { font-family: 'Playfair Display', serif; }
-.serif-italic { font-family: 'Playfair Display', serif; font-style: italic; }
-
-/* Canvas Background */
-#ocean-canvas {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: -1;
-    opacity: 0.2;
-}
-
-/* Navigation */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2.5rem 4rem;
-    position: absolute;
-    width: 100%;
-    z-index: 10;
-}
-
-.logo { 
-    font-family: 'Playfair Display', serif; 
-    font-size: 2rem; 
-    letter-spacing: 8px; 
-    font-style: italic;
-}
-
-.menu a {
-    text-decoration: none;
-    color: var(--deep-blue);
-    margin-left: 3rem;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    transition: opacity 0.4s;
-}
-.menu a:hover { opacity: 0.4; }
-
-/* Hero Section */
-.hero {
+/* 메인 페이지 레이아웃 (index.html) */
+.home-wrapper {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 
-.hero h1 { 
-    font-size: 5rem; 
-    font-weight: 400; 
-    letter-spacing: -1px;
-    animation: fadeInScale 2s ease-out;
+.logo {
+    font-size: 5rem;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 15px;
+    margin-bottom: 3rem;
 }
 
-@keyframes fadeInScale {
-    from { opacity: 0; transform: scale(0.98); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-/* Magazine Section */
-.magazine { padding: 10rem 4rem; max-width: 1400px; margin: 0 auto; }
-.section-header { display: flex; align-items: center; margin-bottom: 6rem; }
-.section-header h3 { font-size: 3rem; margin-right: 3rem; letter-spacing: -1px; }
-.line { flex-grow: 1; height: 1px; background: var(--deep-blue); opacity: 0.1; }
-
-.post-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+.main-nav {
+    display: flex;
     gap: 6rem;
 }
 
-footer {
-    padding: 6rem 4rem;
-    text-align: center;
-    font-size: 0.7rem;
+.main-nav a {
+    text-decoration: none;
+    color: #001F3F;
+    font-size: 0.9rem;
+    letter-spacing: 5px;
+    transition: opacity 0.3s;
+}
+
+.main-nav a:hover {
+    opacity: 0.4;
+}
+
+/* 서브 페이지 네비게이션 (magazine.html 등) */
+.sub-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+}
+
+.logo-small {
+    font-size: 1.5rem;
+    font-style: italic;
     letter-spacing: 3px;
-    text-transform: uppercase;
-    opacity: 0.5;
+    cursor: pointer;
+}
+
+.menu-small a {
+    text-decoration: none;
+    color: #001F3F;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    margin-left: 3rem;
+    opacity: 0.6;
+}
+
+/* 매거진 본문 영역 */
+.content-container {
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    letter-spacing: 8px;
+    margin-bottom: 5rem;
+    font-weight: 400;
 }
