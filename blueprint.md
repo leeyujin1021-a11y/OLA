@@ -9,6 +9,7 @@ OLA는 '바다'를 테마로 한 조용한 럭셔리(Quiet Luxury) 웰니스 허
   - Ocean Canvas: HTML5 Canvas를 이용한 잔잔한 물결 입자 애니메이션.
   - Hero Section: 감성적인 타이포그래피와 배경.
   - Magazine Grid: 포스트 목록을 위한 기본 레이아웃.
+  - **Monetization:** Google AdSense 통합 (`ads.txt`, Verification Meta Tag, Script).
 - **Tech Stack:** HTML5, CSS3 (Modern Features), Vanilla JS.
 
 ## **Planned Refinement (Next Steps)**
