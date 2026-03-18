@@ -13,6 +13,7 @@ OLA는 '바다'를 테마로 한 조용한 럭셔리(Quiet Luxury) 웰니스 허
     - Google AdSense 통합 (`ads.txt`, Verification Meta Tag, Script).
     - SEO 최적화 (페이지별 맞춤 메타 description 추가).
     - 사용자 경험 개선 (Footer 추가, 'Next Read' 내부 링크 강화).
+    - 필수 페이지 구축 (`about.html`, `contact.html`, `privacy.html`).
 - **Tech Stack:** HTML5, CSS3 (Modern Features), Vanilla JS.
 
 ## **Planned Refinement (Next Steps)**
