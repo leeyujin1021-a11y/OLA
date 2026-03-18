@@ -1,89 +1,115 @@
-/* style.css 전체 덮어쓰기용 */
+/* --- 공통 기본 세팅 --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body { 
     background-color: #F8F9FA; 
     color: #1A2B3C; 
     font-family: 'Playfair Display', serif; 
-    overflow: hidden; /* 홈화면 스크롤 방지 */
     -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
 }
 
-/* 상단 네비게이션 (좌 OLA / 우 MENU) */
+/* --- 상단 고정 네비게이션 (공통) --- */
 .top-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem 6%;
+    padding: 2.5rem 6%;
     position: fixed;
     width: 100%;
     top: 0;
+    background-color: rgba(248, 249, 250, 0.95); /* 살짝 투명하게 */
+    z-index: 1000;
 }
 
-.brand {
-    font-size: 1.5rem;
-    letter-spacing: 6px;
-    font-style: italic;
-    font-weight: 400;
-    cursor: pointer;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #1A2B3C;
-    font-size: 0.8rem;
-    letter-spacing: 3px;
-    margin-left: 3rem;
-    opacity: 0.5;
-    transition: 0.3s;
-}
-
+.brand { font-size: 1.5rem; letter-spacing: 6px; font-style: italic; cursor: pointer; text-decoration: none; color: inherit; }
+.menu a { text-decoration: none; color: #1A2B3C; font-size: 0.8rem; letter-spacing: 3px; margin-left: 3rem; opacity: 0.5; transition: 0.3s; }
 .menu a:hover { opacity: 1; }
 
-/* 중앙 메인 콘텐츠 */
-.hero-content {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 10%;
-    max-width: 1100px;
+/* --- [1] 메인 페이지 (index.html) 전용 --- */
+.home-page { overflow: hidden; } /* 홈화면만 스크롤 방지 */
+.hero-content { height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 0 10%; max-width: 1100px; }
+.featured-meta { font-size: 0.7rem; letter-spacing: 4px; opacity: 0.4; margin-bottom: 2rem; text-transform: uppercase; }
+.hero-title { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; font-weight: 400; margin-bottom: 2.5rem; }
+.hero-summary { font-size: 1.15rem; opacity: 0.7; max-width: 550px; margin-bottom: 3.5rem; }
+.read-link { text-decoration: none; color: #1A2B3C; font-style: italic; font-size: 1.1rem; border-bottom: 1px solid rgba(26, 43, 60, 0.3); padding-bottom: 5px; transition: 0.3s; }
+.read-link:hover { padding-left: 10px; border-bottom: 1px solid #1A2B3C; }
+
+/* --- [2] 상세 페이지 (post-x.html) 전용 --- */
+.article-page { padding-top: 150px; padding-bottom: 100px; } /* 네비게이션 공간 확보 */
+.article-container { max-width: 750px; margin: 0 auto; padding: 0 5%; }
+.article-header { text-align: center; margin-bottom: 5rem; }
+.article-category { font-size: 0.8rem; letter-spacing: 3px; opacity: 0.5; text-transform: uppercase; display: block; margin-bottom: 1rem; }
+.article-title { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.2; font-weight: 400; color: #1A2B3C; }
+.article-content { font-size: 1.2rem; line-height: 1.9; color: #333; font-family: serif; }
+.article-content p { margin-bottom: 2.5rem; }
+.back-link { display: block; text-align: center; margin-top: 5rem; text-decoration: none; color: #1A2B3C; font-style: italic; opacity: 0.6; transition: 0.3s; }
+.back-link:hover { opacity: 1; }
+
+/* --- [3] 목록 페이지 (magazine.html) 전용 --- */
+.archive-page { padding-top: 180px; padding-bottom: 100px; }
+.archive-container { max-width: 1000px; margin: 0 auto; padding: 0 5%; }
+
+/* 아카이브 헤더 (The Archive) */
+.archive-header { text-align: center; margin-bottom: 8rem; position: relative; }
+.archive-header h2 { font-size: 4rem; font-weight: 400; font-style: italic; letter-spacing: -2px; color: #1A2B3C; }
+.archive-header h2::after { content: ''; display: block; width: 60px; height: 1px; background: #1A2B3C; margin: 2rem auto 0; opacity: 0.2; }
+
+/* 아카이브 목록 구조 */
+.article-list { display: flex; flex-direction: column; gap: 0; }
+
+/* 각 기사 아이템 (고급 레이아웃) */
+.article-item { 
+    text-decoration: none; 
+    color: inherit; 
+    display: grid;
+    grid-template-columns: 180px 1fr; /* 카테고리와 본문 분리 */
+    gap: 3rem;
+    padding: 4rem 0;
+    border-top: 1px solid rgba(0,0,0,0.03); /* 아주 옅은 선 */
+    transition: 0.4s ease;
+}
+.article-item:last-child { border-bottom: 1px solid rgba(0,0,0,0.03); }
+
+/* 호버 효과 (살짝 떠오름) */
+.article-item:hover { 
+    background-color: #fff;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
 }
 
-.featured-meta {
-    font-size: 0.7rem;
-    letter-spacing: 4px;
-    opacity: 0.4;
-    margin-bottom: 2rem;
-}
-
-.hero-title {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    line-height: 1.1;
+/* 카테고리 및 날짜 */
+.item-meta { text-align: right; padding-top: 0.5rem; }
+.item-category { 
+    font-size: 0.75rem; 
+    letter-spacing: 3px; 
+    text-transform: uppercase; 
     font-weight: 400;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
 }
+.item-date { font-size: 0.8rem; opacity: 0.4; font-style: italic; }
 
-.hero-summary {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    max-width: 550px;
-    opacity: 0.7;
-    margin-bottom: 3.5rem;
-}
-
-.read-link {
-    text-decoration: none;
-    color: #1A2B3C;
-    font-style: italic;
-    font-size: 1.1rem;
-    border-bottom: 1px solid rgba(26, 43, 60, 0.3);
-    padding-bottom: 5px;
-    width: fit-content;
+/* 본문 영역 (제목 + 요약) */
+.item-content { max-width: 650px; }
+.item-title { 
+    font-size: 2rem; 
+    font-weight: 400; 
+    margin-bottom: 1.2rem; 
+    line-height: 1.3; 
     transition: 0.3s;
 }
-
-.read-link:hover {
-    border-bottom: 1px solid #1A2B3C;
-    padding-left: 10px;
+.article-item:hover .item-title { color: #0056b3; /* 호버 시 제목 색상 변경 */ }
+.item-summary { 
+    font-size: 1.05rem; 
+    opacity: 0.6; 
+    line-height: 1.8;
 }
+
+/* 카테고리별 컬러 포인트 (원하는 대로 수정 가능) */
+.cat-neuro { color: #8c7b66; } /* 뇌과학 - 차분한 베이지 */
+.cat-psyc { color: #667b8c; }  /* 심리학 - 차분한 블루 */
+.cat-well { color: #668c71; }  /* 웰니스 - 차분한 그린 */
+.cat-perf { color: #8c6666; }  /* 퍼포먼스 - 차분한 레드 */

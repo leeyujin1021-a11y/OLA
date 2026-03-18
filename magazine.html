@@ -3,51 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OLA | MAGAZINE</title>
+    <title>OLA | THE ARCHIVE</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav class="sub-nav">
-        <div class="logo-small" onclick="location.href='index.html'">OLA</div>
-        <div class="menu-small">
+<body class="archive-page">
+    <nav class="top-nav">
+        <a href="index.html" class="brand">OLA</a>
+        <div class="menu">
             <a href="magazine.html">MAGAZINE</a>
             <a href="flows.html">FLOWS</a>
         </div>
     </nav>
 
-    <main class="magazine-container">
-        <header class="page-header">
-            <h2 class="serif-italic">The Archive</h2>
-            <p class="subtitle">Insights on Ocean, Mind, and Fluidity</p>
+    <main class="archive-container">
+        <header class="archive-header">
+            <h2>The Archive</h2>
+            <p>Insights on Ocean, Mind, and Fluidity</p>
         </header>
 
-        <section class="article-grid">
-            <article class="article-card" onclick="location.href='post-1.html'">
-                <div class="article-info">
-                    <span class="category">Neuroscience</span>
-                    <h3 class="serif">The Psychology of Blue Mind: How Water Heals the Modern Brain</h3>
-                    <p>Exploring the neurological shift that occurs when we immerse ourselves in marine environments...</p>
-                    <span class="read-more">Read Insight</span>
+        <div class="article-list">
+            <a href="post-1.html" class="article-item">
+                <div class="item-meta">
+                    <span class="item-category cat-neuro">NEUROSCIENCE</span>
+                    <span class="item-date">Oct 2023</span>
                 </div>
-            </article>
-
-            <div class="ad-spot"></div>
-
-            <article class="article-card" onclick="location.href='post-2.html'">
-                <div class="article-info">
-                    <span class="category">Luxury Wellness</span>
-                    <h3 class="serif">Luxury Wellness Retreats 2026: Why Ocean Therapy is the New Standard</h3>
-                    <p>The global shift toward 'Silent Luxury' and why the most exclusive retreats are moving underwater...</p>
-                    <span class="read-more">Read Insight</span>
+                <div class="item-content">
+                    <h3 class="item-title">Blue Mind: Why Water is the Natural Remedy for Modern Burnout</h3>
+                    <p class="item-summary">Explore the neurological shift that occurs when we immerse ourselves in marine environments and why it's essential for cognitive recovery.</p>
                 </div>
-            </article>
-        </section>
+            </a>
 
-        <footer class="more-footer">
-            <button class="more-btn">MORE INSIGHT</button>
-        </footer>
+            <a href="post-2.html" class="article-item">
+                <div class="item-meta">
+                    <span class="item-category cat-psyc">PSYCHOLOGY</span>
+                    <span class="item-date">Oct 2023</span>
+                </div>
+                <div class="item-content">
+                    <h3 class="item-title">Breath and Buoyancy: The Psychological Architecture of Scuba Diving</h3>
+                    <p class="item-summary">A deep dive into how controlled breathing and weightlessness under water create a profound state of meditative flow.</p>
+                </div>
+            </a>
+
+            <a href="post-3.html" class="article-item">
+                <div class="item-meta">
+                    <span class="item-category cat-well">WELL-BEING</span>
+                    <span class="item-date">Oct 2023</span>
+                </div>
+                <div class="item-content">
+                    <h3 class="item-title">The Architecture of Awe: Why Vast Horizons Heal</h3>
+                    <p class="item-summary">Investigating the psychological impact of staring at the endless ocean horizon and its power to reduce anxiety and broaden perspective.</p>
+                </div>
+            </a>
+
+            <a href="post-4.html" class="article-item">
+                <div class="item-meta">
+                    <span class="item-category cat-perf">PERFORMANCE</span>
+                    <span class="item-date">Oct 2023</span>
+                </div>
+                <div class="item-content">
+                    <h3 class="item-title">Liquid Flow: Finding the Deepest State of Concentration</h3>
+                    <p class="item-summary">Applying the principles of water fluidity to peak performance and concentration, learning to adapt and move with poise.</p>
+                </div>
+            </a>
+
+            <a href="post-5.html" class="article-item">
+                <div class="item-meta">
+                    <span class="item-category cat-well">LIFESTYLE</span>
+                    <span class="item-date">Oct 2023</span>
+                </div>
+                <div class="item-content">
+                    <h3 class="item-title">The Blue Heritage: Cultivating Resilience Through Water</h3>
+                    <p class="item-summary">Understanding how coastal cultures have historically utilized the ocean for physical and mental resilience in times of change.</p>
+                </div>
+            </a>
+
+        </div>
     </main>
-    <script src="main.js"></script>
 </body>
 </html>
