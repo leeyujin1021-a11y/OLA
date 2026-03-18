@@ -112,4 +112,70 @@ body {
 .cat-neuro { color: #8c7b66; } /* 뇌과학 - 차분한 베이지 */
 .cat-psyc { color: #667b8c; }  /* 심리학 - 차분한 블루 */
 .cat-well { color: #668c71; }  /* 웰니스 - 차분한 그린 */
-.cat-perf { color: #8c6666; }  /* 퍼포먼스 - 차분한 레드 */
+.cat-perf { color: #8c6666; }  /* 퍼포먼스 - 차분한 레드 *//* --- 상세 페이지 (post-x.html) 전용 디자인 --- */
+.article-page { 
+    padding-top: 200px; /* 상단 메뉴와 겹치지 않게 여유 공간 */
+    padding-bottom: 150px; 
+}
+
+.article-container { 
+    max-width: 700px; /* 글 읽기 가장 최적화된 너비 */
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.article-header { 
+    text-align: left; 
+    margin-bottom: 6rem; 
+}
+
+.article-category { 
+    font-size: 0.8rem; 
+    letter-spacing: 4px; 
+    opacity: 0.5; 
+    text-transform: uppercase; 
+    display: block; 
+    margin-bottom: 1.5rem; 
+}
+
+.article-title { 
+    font-size: clamp(2.5rem, 5vw, 4rem); 
+    line-height: 1.1; 
+    font-weight: 400; 
+    color: #1A2B3C; 
+}
+
+/* 본문 스타일 (폰트와 간격이 핵심) */
+.article-content { 
+    font-size: 1.25rem; 
+    line-height: 2; /* 줄간격을 넓게 해서 눈이 편하게 */
+    color: #2D3436; 
+    font-family: 'Playfair Display', serif; 
+}
+
+.article-content p { 
+    margin-bottom: 2.5rem; /* 문단 사이 여백 */
+}
+
+/* 첫 번째 문단의 첫 글자를 크게 (매거진 효과) */
+.article-content p:first-child::first-letter {
+    float: left;
+    font-size: 4.5rem;
+    line-height: 1;
+    padding-top: 4px;
+    padding-right: 12px;
+    font-weight: 400;
+}
+
+.back-link { 
+    display: inline-block; 
+    margin-top: 8rem; 
+    text-decoration: none; 
+    color: #1A2B3C; 
+    font-style: italic; 
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 5px;
+    transition: 0.3s; 
+}
+
+.back-link:hover { opacity: 0.5; padding-left: 10px; }
