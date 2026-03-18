@@ -179,3 +179,70 @@ body {
 }
 
 .back-link:hover { opacity: 0.5; padding-left: 10px; }
+
+/* --- [4] 하단 푸터 (Footer) --- */
+.site-footer {
+    padding: 6rem 6% 3rem;
+    background-color: #F8F9FA;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 2rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #1A2B3C;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin: 0 1.5rem;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+.footer-copy {
+    font-size: 0.7rem;
+    opacity: 0.3;
+    letter-spacing: 1px;
+}
+
+/* --- [5] 'Next Read' 섹션 (기사 하단) --- */
+.next-read-container {
+    margin-top: 6rem;
+    padding-top: 4rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.next-read-label {
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    opacity: 0.4;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.next-read-link {
+    text-decoration: none;
+    display: block;
+    transition: 0.4s;
+}
+
+.next-read-title {
+    font-size: 2rem;
+    line-height: 1.3;
+    font-weight: 400;
+    color: #1A2B3C;
+    max-width: 500px;
+}
+
+.next-read-link:hover .next-read-title {
+    color: #0056b3;
+    transform: translateX(10px);
+}
